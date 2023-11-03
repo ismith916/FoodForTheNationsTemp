@@ -1,79 +1,70 @@
 import React from "react";
-import { Card, ListGroup } from "react-bootstrap";
-// import profilePicture from "../../images/about_profile_pic.jpg"
-
 import aboutStyle from "./About.module.css";
-import Wrapper from "../ui/Wrapper";
 import useMediaQuery from "../UseMediaQuery/UseMediaQuery";
+import { Button } from "react-bootstrap";
 
 const About = () => {
-  const matchesSm = useMediaQuery("(max-width: 768px)");
-
-  const innerCardWrapper = aboutStyle.innerCardWrapper;
-  const cardBody = aboutStyle.cardBody;
-  // const aboutImg = aboutStyle.aboutImg;
+  // const matchesSm = useMediaQuery("(max-width: 768px)");
   const aboutTitle = aboutStyle.aboutTitle;
-  const subText = aboutStyle.subText;
-  const subTextOffer = aboutStyle.subTextOffer;
-  const cardWrapper = aboutStyle.cardWrapper;
   const aboutTitleWrapper = aboutStyle.aboutTitleWrapper;
   const emTitle = aboutStyle.emTitle;
-  const listGroup = aboutStyle.listGroup;
-
+  const btn = aboutStyle.btn;
+  const matches473 = useMediaQuery("(min-width:473px)");
+  const matches432 = useMediaQuery("(min-width:411px)");
   return (
     <>
       <div id="about">
-        <Wrapper className={cardWrapper}>
-          <div className={aboutTitleWrapper}>
-            {matchesSm ? (
-              <Card.Title className={aboutTitle}>
-                <div className={emTitle}>
-                  Proudly <br /> Family Owned
-                </div>
-              </Card.Title>
-            ) : (
-              <Card.Title className={aboutTitle}>
-                <div className={emTitle}>About Us:</div>
-              </Card.Title>
-            )}
+        <div className={aboutTitleWrapper}>
+          <div className={aboutTitle}>
+            <div id="vision" className={emTitle}>
+              Our vision
+            </div>
+            <p>
+              We demonstrate the
+              {!matches473 && <br />}
+              Love of God in our
+              {!matches473 && <br />}
+              giving to those in need
+              <hr style={{ margin: ".4rem 0" }} />
+              <span>
+                Matthew 25:35-40
+                {!matches473 && <br />} Isaiah 58:6,7
+              </span>
+            </p>
           </div>
-          <Wrapper className={innerCardWrapper}>
-            <Wrapper className={cardBody}>
-              <figure>
-                {/* <Card.Img
-                  src={profilePicture}
-                  alt="pressure washing marital business"
-                  className={[aboutImg
-                  ]}
-                /> */}
-                <div><img src="https://foodforthenations704431282.files.wordpress.com/2019/04/dsc00634.jpg?w=1024&h=633&crop=1" alt="Who We Are" /></div>
-              </figure>
-              <Card.Text className={subText}>
-                <h1>Our History</h1>
-                The founder of Food For The Nations, Joanne Fournillier, and her two kids, Monique and Jovan, began feeding the homeless on Easter and Thanksgiving in New York City. Joanne spent a few years not only giving the meals but sharing a word of encouragement and hope for a better tomorrow. The family also took clothing and toys to the kids who lived at the shelters, at this time a close friend joined the group as Joanne’s desire to do more became evident. As a single  parent of two kids she understood the story of some and helped in whatever way she could. Her faith being the motivator.
+          <p style={{margin:"2rem 0 0 0"}}>
+            No need is too small and no voice is too quiet to be heard. We will
+            devote the time necessary to advocate for and feed those in need!
+          </p>
+          <p>
+            We do community work both locally, in New York City, and abroad.
+          </p>
+          <p>
+            People volunteer for us each year and make the difference in the
+            lives of others. Find out how to become part of our team here!
+          </p>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              flexWrap: "wrap",
+              margin: "2rem 0 0 0"
+            }}
+          >
+            <Button href="#contact" className={btn}>
+              CONTACT US TODAY
+            </Button>
 
-                In 2007, after a years of witnessing the harsh reality of homelessness and food insecurity, Food For The Nations was formed and registered as a non profit organization.
-
-                <h1>Our Mission</h1>
-                Food For The Nations distributes food for local, national and international causes meeting the needs of the hungry and hurting. We equip them through counseling to become self-sufficient and eventually provide for themselves. We actively support the Gospel of Jesus Christ in the Global Church.
-
-              </Card.Text>
-              <hr />
-              {/* <Card.Text className={subTextOffer}>
-                Services
-              </Card.Text> */}
-              {/* <Card.Text className={subTextOffer}>
-                Offered:
-              </Card.Text> */}
-              {/* <ListGroup className={listGroup}>
-                <ListGroup.Item>Service 1</ListGroup.Item>
-                <ListGroup.Item>Service 2</ListGroup.Item>
-                <ListGroup.Item>Service 3</ListGroup.Item>
-                <ListGroup.Item>Service 4</ListGroup.Item>
-              </ListGroup> */}
-            </Wrapper>
-          </Wrapper>
-        </Wrapper>
+            <Button
+              style={{ padding: "0.5rem 4.2rem" }}
+              href="https://square.link/u/ICunELm7"
+              className={btn}
+            >
+              DONATE
+            </Button>
+          </div>
+        </div>
       </div>
     </>
   );

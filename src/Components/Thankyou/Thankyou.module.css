@@ -1,11 +1,16 @@
 .cardWrapper {
    padding: 1.3rem 1.3rem 3rem 1.3rem;
    border-radius: 0;
-   background: url("../../images/small/power-washing-floor-sm.jpg");
+   /* background: url("../../images/small/power-washing-floor-sm.jpg"); */
    background-size: cover;
    display: flex;
    justify-content: center;
    height: 100vh;
+   background-color: #efefef;
+   background-size: cover;
+   background-blend-mode: luminosity;
+   background-image: url("../../images/new/zambia-images/7-background.jpg");
+   
 }
 
 .innerCardWrapper {
@@ -14,6 +19,8 @@
 }
 
 .cardBody {
+   font-size: 5vw;
+   line-height: 6vw;
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -25,6 +32,10 @@
       rgba(255, 255, 255, 0.5206874986322654) 125%,
       rgba(2, 0, 36, 0) 100%
    );
-   box-shadow: 0 1px 5px rgb(0 0 0 / 83%);
+   box-shadow: 0 1px 5px rgb(0 0 0 / 23%);
    backdrop-filter: blur(1.52px);
+}
+
+.cardBody > h1 {
+   font-size: 10vw;
 }

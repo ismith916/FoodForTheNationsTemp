@@ -12,16 +12,14 @@ const Thankyou = () => {
 
   return (
     <>
-      <Wrapper className="contactBody"></Wrapper>
-
       <Wrapper className={cardWrapper}>
         <Wrapper className={innerCardWrapper}>
           <Wrapper className={cardBody}>
             <h1>
-              Hello <b>{name}</b></h1> Thank you, for contacting us. <br />
+              Hello <b>{name}</b></h1> Thank you for contacting us. <br />
             We will be in contact soon!
 
-            <Button variant={"warning"} href="/">
+            <Button style={{margin:"2rem 0 0 0", fontSize: "5vw", backgroundColor:"#371528", color:"white"}} variant={"warning"} href="/">
               Back to Website
             </Button>
           </Wrapper>
