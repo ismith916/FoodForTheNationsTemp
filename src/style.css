@@ -1,0 +1,11 @@
+card {
+ border: none !important;
+}
+
+.nav-link {
+    color: white !important;
+}
+
+.container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    max-width: 1780px;
+}

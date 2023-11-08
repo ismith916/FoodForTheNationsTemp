@@ -1,0 +1,93 @@
+.aboutTitle {
+  font-style: italic;
+  font-size: 2.5rem;
+  line-height: 1.5rem;
+  font-weight: bold;
+  color: #5b2443;
+  text-shadow: 1px 1px 2px rgb(15, 15, 15);
+}
+
+.aboutTitleWrapper {
+  text-align: center;
+  background-size: cover;
+  margin: -41px 0 0 0;
+  line-height: 1.1rem;
+  background-color: #ffffffeb;
+  padding: 1rem 0 2.5rem 0;
+}
+
+/* paragraph style */
+.aboutTitleWrapper > p {
+  margin: 1.3rem 0 0 0;
+  line-height: 1.2rem;
+  padding: 0 0.5rem;
+  text-align: justify;
+}
+
+.emTitle {
+  margin: 2rem 0 0 0;
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  text-transform: uppercase;
+  border-bottom: 10px solid #ffffff00;
+}
+
+.aboutTitle > h1 {
+  padding: 1rem 0 0 0;
+  font-size: 2rem;
+  font-style: normal;
+  color: black;
+  letter-spacing: -1px;
+}
+
+@media screen and (min-width: 375px) {
+  .emTitle {
+    font-size: 2.9rem;
+  }
+}
+
+@media screen and (min-width: 414px) {
+  .emTitle {
+    font-size: 3rem;
+  }
+  .aboutTitleWrapper > em {
+    padding: 0 1rem;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .aboutTitleWrapper > p {
+    text-align: left;
+    /* padding: 0; */
+    font-size: 1.1rem;
+    line-height: 1.3rem;
+  }
+  .aboutTitleWrapper > em {
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .aboutTitleWrapper > em {
+    font-size: 1.8rem;
+    line-height: 2rem;
+  }
+  .aboutTitleWrapper > p {
+    font-size: 1.3rem;
+    line-height: 1.4rem;
+  }
+
+  .aboutTitleWrapper {
+    margin: -48px 0 0 0;
+  }
+
+  .emTitle {
+    background-color: #ffffff00;
+    padding: 7.5rem 1.5rem 1.8rem 1.5rem;
+    margin: -3rem 0 0 0;
+
+    /* color: white; */
+    border: 0;
+  }
+}

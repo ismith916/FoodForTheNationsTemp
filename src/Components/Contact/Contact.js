@@ -1,23 +1,21 @@
 import { useNavigate } from "react-router-dom";
-
-import { Row, Col, Button, Form, Card } from "react-bootstrap";
+import { Form, Card } from "react-bootstrap";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import ContactStyle from "./Contact.module.css";
-import CompOneStyle from "../ComponentOne/CompOne.module.css";
 import Wrapper from "../ui/Wrapper";
-import InfoFooter from "../Info/InfoFooter";
+import Title from "./Title";
+import Email from "./Email";
+import Message from "./Message";
+import Phone from "./Phone";
+import SubmitButton from "./SubmitButton";
+import Name from "./Name";
 
 const Contact = () => {
-  const contact = ContactStyle.contact;
   const form = ContactStyle.form;
-  const email = ContactStyle.email;
-  const name = ContactStyle.name;
-  const innerCardWrapper = CompOneStyle.innerCardWrapper;
-  const btn = ContactStyle.btn;
   const footer = ContactStyle.footer;
-  const contactTitleWrapper = ContactStyle.contactTitleWrapper;
-  const cardWrapper = ContactStyle.cardWrapper
+  const cardWrapper = ContactStyle.cardWrapper;
+  const fieldWrapper = ContactStyle.fieldWrapper;
 
   const navigate = useNavigate();
   const refForm = useRef();
@@ -26,18 +24,18 @@ const Contact = () => {
     e.preventDefault();
     emailjs
       .sendForm(
-        "service_yqqa4un", //service id 
-        "inform-template", //template id (get from settings)
+        "service_xjpxy88", //service id
+        "template_gjsh70q", //template id (get from settings)
         // console.log("DATA",  refForm.current.name.value),
         refForm.current,
-        "-WpB-FImu7bWPZZxl" //public key (get from account page in Email.js)
+        "Z3WrABviQQrOqHpiM" //public key (get from account page in Email.js)
       )
       .then(
         (result) => {
           //   alert("Message successfully sent!");
           navigate(`thankyou/${refForm.current.name.value}`);
           // window.location.reload(false);
-          console.log("result", result);
+          console.log("result", refForm.current.name.value);
         },
         (error) => {
           alert("Failed to send the message, please try again");
@@ -48,10 +46,11 @@ const Contact = () => {
 
   return (
     <>
-      <Card id="contact" className={innerCardWrapper}>
-        <div className={contactTitleWrapper}>
-          <Card.Title className={contact}>Volunteer / Questions? Contact Us!</Card.Title>
-        </div>
+      <Card
+        id="contact"
+        style={{ border: "none", borderRadius: "0", background: "#5b2443" }}
+      >
+        <Title />
         <Wrapper className={cardWrapper}>
           <Form
             id="contact"
@@ -60,44 +59,21 @@ const Contact = () => {
             className={form}
             autoComplete="on"
           >
-            <Row>
-              <Form.Group as={Col} sm={12} md={6} controlId="formGridEmail">
-                <Form.Control
-                  className={email}
-                  name="email"
-                  type="email"
-                  placeholder="Enter Email"
-                  required
-                />
-              </Form.Group>
+            <div className={fieldWrapper}>
+              <Email />
+              <Name />
+            </div>
+            <Phone />
 
-              <Form.Group as={Col} controlId="formGridPassword">
-                <Form.Control
-                  className={name}
-                  name="name"
-                  type="name"
-                  placeholder="Enter Name"
-                  required
-                />
-              </Form.Group>
-            </Row>
+            <Message />
 
-            <Form.Control
-              as="textarea"
-              name="message"
-              type="text"
-              rows={3}
-              placeholder="Enter Message"
-            />
-            <Button variant="light" type="submit" value="send" className={btn}>
-              SUBMIT
-            </Button>
+            <SubmitButton />
           </Form>
-          <InfoFooter />
         </Wrapper>
       </Card>
       <Card.Text className={footer}>
-        © 2023 All Rights Reserved DesigninGlory.com
+        © 2023 All Rights Reserved{" "}
+        <a style={{textDecoration:"none", color:"#371528"}} href="https://www.designinglory.com">DesigninGlory.com</a>
       </Card.Text>
     </>
   );

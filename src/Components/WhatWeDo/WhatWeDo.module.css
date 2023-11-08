@@ -1,0 +1,222 @@
+.aboutTitle {
+  font-style: italic;
+  font-size: 2.5rem;
+  line-height: 1.5rem;
+  font-weight: bold;
+  color: #5b2443;
+  text-shadow: 1px 1px 2px rgb(15, 15, 15);
+}
+
+.aboutTitleWrapper {
+  text-align: center;
+  background-size: cover;
+  margin: 0 0 2.5rem 0;
+  /* background-color: #ffffffeb; */
+  background-color: #e1e1e1f5;
+}
+
+/* paragraph style */
+.aboutTitleWrapper > p,
+.zambiaTitle > p {
+  margin: 0.3rem 0 0 0;
+  line-height: 1.2rem;
+  padding: 0 0.5rem;
+  text-align: justify;
+}
+
+.aboutTitleWrapper > h1 {
+  letter-spacing: -1px;
+}
+
+.emTitle {
+  margin: -40px 0 0 0;
+  line-height: 2.5rem;
+  text-transform: uppercase;
+  border-bottom: 10px solid #ffffff00;
+  padding: 5rem 0 0 0;
+}
+
+.aboutTitle > h1,
+.zambiaTitle > h1 {
+  padding: 1rem 0 0 0;
+  font-size: 2rem;
+  font-style: normal;
+  color: black;
+  letter-spacing: -1px;
+}
+
+.easterTitle {
+  padding: 0 1rem;
+}
+
+.cardWrapper,
+.cardWrapper2 {
+  padding: 0.5rem;
+  border-radius: 0;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    60deg,
+    rgb(2 0 36 / 0%) 0%,
+    rgba(91, 36, 67, 1) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cardWrapper2 {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    180deg,
+    rgb(2 0 36 / 0%) 0%,
+    rgba(91, 36, 67, 1) 100%
+  );
+}
+
+@media screen and (min-width: 375px) {
+  .emTitle {
+    font-size: 2.9rem;
+  }
+
+  /* paragraph style */
+  .aboutTitleWrapper > p {
+    padding: 0 1.2rem;
+    margin: 0.8rem 0 0 0;
+  }
+
+  .easterTitle {
+    padding: 0 2.5rem;
+  }
+}
+
+@media screen and (min-width: 414px) {
+  .aboutTitle {
+    line-height: 1.8rem;
+  }
+
+  .emTitle {
+    font-size: 3rem;
+  }
+
+  .aboutTitleWrapper > p {
+    padding: 0 0.8rem;
+    margin: 0 0 0.8rem 0;
+  }
+
+  .easterTitle {
+    padding: 0;
+  }
+
+  .aboutTitleWrapper > h1 {
+    padding: 0 1.8rem;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .aboutTitleWrapper > p {
+    text-align: left;
+    /* padding: 0rem; */
+    font-size: 1.1rem;
+    line-height: 1.3rem;
+  }
+
+  .aboutTitleWrapper > h1 {
+    padding: 0 3rem;
+    letter-spacing: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .aboutTitleWrapper {
+    background-position: center 374px;
+    margin-top: -1.9rem;
+    background-size: cover;
+  }
+
+  .aboutTitleWrapper > p {
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+  }
+
+  .aboutTitle > h1 {
+    font-size: 3rem;
+    padding: 0;
+    /* background-color: #ffffff96; */
+  }
+
+  .zambiaTitle {
+    margin: 5rem 0 1rem 0;
+    font-weight: 500;
+    text-shadow: none;
+    color: black;
+    font-size: 2rem;
+  }
+
+  .aboutTitleWrapper > h1 > em {
+    font-size: 2.8rem;
+  }
+
+  .aboutTitleWrapper > h1 {
+    padding: 0 0 0 0;
+  }
+
+  .emTitle {
+    font-size: 3.8rem;
+    margin: -48px 0 0 0;
+    background-color: #ffffff00;
+    padding: 8.5rem 1.5rem 1.8rem 1.5rem;
+    /* color: white; */
+    border: 0;
+  }
+
+  .cardWrapper {
+    margin: 0 0 3rem 0;
+  }
+}
+/* 
+@media screen and (min-width: 996px) {
+  .emTitle {
+    font-size: 3.5rem;
+  }
+
+  .aboutTitle {
+    font-size: 3.8rem;
+    line-height: 2.1rem;
+  }
+
+  .aboutTitleWrapper {
+    background-position: center 374px;
+    margin-top: -2.5rem;
+    height: 11rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+}
+
+@media screen and (min-width: 1200px) {
+  .aboutTitleWrapper {
+    margin-top: -3.5rem;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .emTitle {
+    font-size: 4.5rem;
+  }
+
+  .aboutTitle {
+    font-size: 5rem;
+    line-height: 2.5rem;
+  }
+
+  .aboutTitleWrapper {
+    height: 12rem;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .aboutTitle {
+    font-size: 5rem;
+  }
+} */
